@@ -27,7 +27,8 @@ export default class AddFolder extends React.Component {
           })
           .catch(error => {
             console.error({ error })
-          })
+          });
+          this.props.history.push(`/`)
       }
 
     render(){
@@ -35,7 +36,7 @@ export default class AddFolder extends React.Component {
         return(
             <NotefulForm className="newFolderForm" onSubmit={this.handleClickAddFolder}>
                 <label htmlFor="newFolderName">Name: </label>
-                <input type="text" id="newFolderName" name="newFolderName"/>
+                <input type="text" id="newFolderName" name="newFolderName" required/>
                 <button type="submit">Save</button>
             </NotefulForm>
         )

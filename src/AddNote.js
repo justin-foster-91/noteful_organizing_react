@@ -35,7 +35,8 @@ export default class AddNote extends React.Component {
             })
             .catch(error => {
               console.error({ error })
-            })
+            });
+            this.props.history.push(`/`)
     }
 
     render(){
@@ -47,7 +48,7 @@ export default class AddNote extends React.Component {
                     {folders.map(folder => <option value={folder.id} key={folder.id}>{folder.name}</option> )}
                 </select>
                 <label htmlFor="newNoteName">Name: </label>
-                <input type="text" id="newNoteName" name="newNoteName"/>
+                <input type="text" id="newNoteName" name="newNoteName" required/>
                 <label htmlFor="newNoteContent">Note: </label>
                 <textarea id="newNoteContent" rows="14" cols="10" wrap="soft" name="newNoteContent"/>
                 <button type="submit">Save</button>
