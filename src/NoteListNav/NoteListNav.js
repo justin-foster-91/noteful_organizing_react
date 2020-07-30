@@ -6,11 +6,16 @@ import ApiContext from '../ApiContext'
 import { countNotesForFolder } from '../notes-helpers'
 import './NoteListNav.css'
 
+
 export default class NoteListNav extends React.Component {
+
   static contextType = ApiContext;
 
+
+
   render() {
-    const { folders=[], notes=[] } = this.context
+    const { folders=[], notes=[] } = this.context;
+
     return (
       <div className='NoteListNav'>
         <ul className='NoteListNav__list'>
