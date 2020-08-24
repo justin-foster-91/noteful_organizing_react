@@ -1,7 +1,7 @@
 import React from 'react'
-import NotefulForm from './NotefulForm/NotefulForm'
-import ApiContext from './ApiContext'
-import config from './config'
+import NotefulForm from '../NotefulForm/NotefulForm'
+import ApiContext from '../ApiContext'
+import config from '../config'
 
 export default class AddNote extends React.Component {
 
